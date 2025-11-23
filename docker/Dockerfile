@@ -1,8 +1,6 @@
-FROM openjdk:21
-LABEL authors="defix"
+FROM amazoncorretto:21
 
 WORKDIR /app
-COPY ../target/current-project-ziptegrity-remake-0.0.2-SNAPSHOT.jar app.jar
-EXPOSE 3030
+COPY ./build/pet-project-multi-service-app-0.0.2-SNAPSHOT.jar /app
 
-ENTRYPOINT ["java", "--enable-preview", "-jar", "app.jar"]
+CMD ["java", "-jar", "pet-project-multi-service-app-0.0.2-SNAPSHOT.jar"]
