@@ -1,12 +1,8 @@
-
-
--- Таблица ролей
 CREATE TABLE roles (
                        id SERIAL PRIMARY KEY,
                        name VARCHAR(64)
 );
 
--- Таблица пользователей
 CREATE TABLE users (
                        id SERIAL PRIMARY KEY,
                        username VARCHAR(64) UNIQUE NOT NULL,
@@ -14,7 +10,6 @@ CREATE TABLE users (
                        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Связующая таблица для пользователей и ролей
 CREATE TABLE users_roles (
                              user_id INT NOT NULL,
                              role_id INT NOT NULL,
@@ -23,13 +18,11 @@ CREATE TABLE users_roles (
                              CONSTRAINT fk_users_roles_role FOREIGN KEY (role_id) REFERENCES roles(id) ON DELETE CASCADE
 );
 
--- Таблица чатов
 CREATE TABLE chats (
                        id SERIAL PRIMARY KEY,
                        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Связующая таблица для пользователей и чатов
 CREATE TABLE users_chats (
                              chat_id INT NOT NULL,
                              user_id INT NOT NULL,
@@ -38,7 +31,6 @@ CREATE TABLE users_chats (
                              CONSTRAINT fk_users_chats_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
 
--- Таблица ключей для чатов
 CREATE TABLE chat_keys (
                            user_id INT PRIMARY KEY,
                            private_key TEXT,

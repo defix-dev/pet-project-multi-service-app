@@ -45,7 +45,6 @@ public class ChatStompController {
      * @param principal The authenticated user sending the message.
      */
     @MessageMapping("/chat/{id}")
-    @PreAuthorize("isAuthenticated()")
     public void sendMessage(@DestinationVariable("id") int id, String message, Principal principal) {
         logger.debug("Message to send: {}", message);
         chatFacade.sendMessageToChat(

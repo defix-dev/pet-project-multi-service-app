@@ -46,7 +46,7 @@ public class ChatControllerTests {
     private Provider<List<ChatApiDTO>, Integer> chatProvider;
 
     @Nested
-    @DisplayName("Успешные тесты-провайдеры")
+    @DisplayName("Test of success test-providers")
     class SuccessfulCases {
         @Test
         @WithMockUser(username = "user")
@@ -127,7 +127,7 @@ public class ChatControllerTests {
     }
 
     @Nested
-    @DisplayName("Тесты на проверку пустых данных")
+    @DisplayName("Test of empty data")
     class NotFoundErrorCases {
         @Test
         @WithMockUser(username = "user")
@@ -165,7 +165,7 @@ public class ChatControllerTests {
     }
 
     @Nested
-    @DisplayName("Тесты на проверку ошибок авторизации")
+    @DisplayName("Test of auth errors")
     class AuthErrorCases {
         @Test
         public void getChatsIfPrincipalNullTest() throws Exception {
