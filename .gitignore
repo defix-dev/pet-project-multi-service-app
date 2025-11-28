@@ -33,9 +33,9 @@ build/
 .vscode/
 
 ### Docker ###
-docker/build
-docker/pgdata
-docker/.env
+ms_docker/build
+ms_docker/pgdata
+ms_docker/.env
 
 ### Common ###
 .env

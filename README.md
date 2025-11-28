@@ -61,7 +61,7 @@ This project aims to demonstrate the integration of several key services in a si
       java -jar target/multi-service-build.jar
       ```
 
-    - Or using Docker Compose (navigate to the `docker` folder first):
+    - Or using Docker Compose (navigate to the `ms_docker` folder first):
 
       ```bash
       docker compose up

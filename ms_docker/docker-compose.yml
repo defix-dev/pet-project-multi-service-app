@@ -1,7 +1,7 @@
 version: "3.9"
 
 services:
-  ms_postgres:
+  postgres:
     image: postgres:15
     environment:
       - POSTGRES_USER=${DB_USERNAME}
@@ -15,7 +15,7 @@ services:
     volumes:
       - ms_pgdata:/var/lib/postgresql/data
 
-  ms_backend:
+  backend:
     build: .
     ports:
       - "8080:8080"
@@ -30,7 +30,7 @@ services:
       - MESSAGE_SECRET_KEY=${MESSAGE_SECRET_KEY}
       - WEATHER_API_KEY=${WEATHER_API_KEY}
     depends_on:
-      ms_postgres:
+      postgres:
         condition: service_healthy
 
 volumes:
