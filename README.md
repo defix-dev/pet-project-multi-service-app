@@ -71,7 +71,7 @@ This project aims to demonstrate the integration of several key services in a si
 
 Once the application is running, you can access it via the following endpoints:
 
-- **Home Page**: [http://localhost:3030/](http://localhost:3030/)
+- **Home Page**: [http://localhost:8080/](http://localhost:8080/)
 - **Weather**: Accessible through the weather service API.
 - **Chat**: End-to-end encrypted messaging system.
 - **Currency Converter**: Access via the currency conversion API.
