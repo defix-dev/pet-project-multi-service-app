@@ -1,5 +1,7 @@
+version: "3.9"
+
 services:
-  postgres:
+  ms_postgres:
     image: postgres:15
     environment:
       - POSTGRES_USER=${DB_USERNAME}
@@ -11,9 +13,9 @@ services:
       timeout: 3s
       retries: 10
     volumes:
-      - ./pgdata:/var/lib/postgresql/data
+      - ms_pgdata:/var/lib/postgresql/data
 
-  backend:
+  ms_backend:
     build: .
     ports:
       - "8080:8080"
@@ -23,9 +25,13 @@ services:
       - DB_PASSWORD=${DB_PASSWORD}
       - DB_PORT=${DB_PORT}
       - DB_NAME=${DB_NAME}
+      - DB_HOST=${DB_HOST}
       - JWT_SECRET_KEY=${JWT_SECRET_KEY}
       - MESSAGE_SECRET_KEY=${MESSAGE_SECRET_KEY}
       - WEATHER_API_KEY=${WEATHER_API_KEY}
     depends_on:
-      postgres:
+      ms_postgres:
         condition: service_healthy
+
+volumes:
+  ms_pgdata:
