@@ -9,10 +9,10 @@
         <relativePath/>
     </parent>
     <groupId>org.defix</groupId>
-    <artifactId>pet-project-multi-service-app</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
-    <name>pet-project-multi-service-app</name>
-    <description>pet-project-multi-service-app</description>
+    <artifactId>multi-service</artifactId>
+    <version>build</version>
+    <name>Multi Service App</name>
+    <description>No description</description>
     <url/>
     <licenses>
         <license/>
@@ -160,37 +160,12 @@
                 <configuration>
                     <source>21</source>
                     <target>21</target>
-                    <compilerArgs>
-                        <arg>--enable-preview</arg>
-                    </compilerArgs>
                 </configuration>
             </plugin>
 
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <jvmArguments>--enable-preview</jvmArguments>
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <configuration>
-                    <argLine>--enable-preview</argLine>
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.3.0</version>
-                <configuration>
-                    <additionalOptions>
-                        <additionalOption>--enable-preview</additionalOption>
-                    </additionalOptions>
-                </configuration>
             </plugin>
         </plugins>
     </build>

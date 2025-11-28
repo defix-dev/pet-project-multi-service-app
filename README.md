@@ -58,7 +58,7 @@ This project aims to demonstrate the integration of several key services in a si
     - Using the `.jar` file:
 
       ```bash
-      java -jar target/pet-project-multi-service-app-0.0.2-SNAPSHOT.jar
+      java -jar target/multi-service-build.jar
       ```
 
     - Or using Docker Compose (navigate to the `docker` folder first):
