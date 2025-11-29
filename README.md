@@ -1,4 +1,4 @@
-# Pet Project Multi-Service App
+# Multi-Service App
 
 A service-oriented web application showcasing multiple independent services. This project serves as a demonstration of various skills in solving different problems (integrating various services, working with security, and more).
 
