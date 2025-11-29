@@ -99,12 +99,6 @@ This will execute all the tests in the project.
 - **Real-time Data**: Weather and currency data are fetched in real-time from external APIs.
 - **Spring Boot Security**: The project leverages Spring Security for handling authentication and authorization using JWTs.
 
-## Contributing
-
-This project is a **pet project** and primarily serves as a demonstration of skills. Contributions are welcome, though the focus is on showcasing various technical components rather than production-level features.
-
-Feel free to fork the repository and create pull requests for any improvements!
-
 ## License
 
-This project is licensed under the MIT License.
+No license.
